@@ -59,7 +59,7 @@ class Logger {
     {
         // Merge settings
         $this->settings =  array_merge(array(
-            'path' => './logs',
+            'path' => '.',
             'name_format' => 'Y-m-d',
             'extension' => 'log',
             'message_format' => '[%label%] %date%%message%'
