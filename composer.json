@@ -1,0 +1,15 @@
+{
+  "name": "silalahi/slim-logger",
+  "description": "File log writter class and middleware for Slim framework",
+  "authors": [
+    {
+      "name": "Jogi Silalahi",
+      "email": "jogi@pistarlabs.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Silalahi\\Slim\\": "src"
+    }
+  },
+}
