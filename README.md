@@ -89,6 +89,7 @@ The code above will create a log file:
 ```
 [INFO] 2015-12-21T01:30:58+07:00 |200|0.003357 sec|::1|GET /
 [INFO] 2015-12-21T01:31:04+07:00 |200|0.001672 sec|::1|GET /
+[INFO] 2015-12-21T01:58:32+07:00 |404|0.001519 sec|::1|GET page-not-found
 ```
 
 ## Settings
