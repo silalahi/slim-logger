@@ -98,7 +98,7 @@ class Logger {
         // Method access
         $method = $request->getMethod();
 
-        $this->write(sprintf("|%d|%13v|%s|%s %s", $response->getStatus(), $latency, $clientIP, $method, $path), self::INFO);
+        $this->write(sprintf("|%d|%13v|%s|%s %s", $response->getStatusCode(), $latency, $clientIP, $method, $path), self::INFO);
 
         return $response;
     }
