@@ -1,5 +1,5 @@
 # Logger for Slim framework 3
-File log writter for Slim framework. Logger works well as class library (inject) or middleware for Slim framework 3 application.
+File log writter for Slim framework. Logger works well as class library (inject) or middleware for Slim framework 3 application. Logger created from [Slim-Logger](https://github.com/codeguy/Slim-Logger) and inspired from (Gin)[https://github.com/gin-gonic/gin] log
 
 ## Install
 You can install Logger via [composer](https://getcomposer.org/).
