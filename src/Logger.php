@@ -62,7 +62,7 @@ class Logger {
             'path' => '.',
             'name_format' => 'Y-m-d',
             'extension' => 'log',
-            'message_format' => '[%label%] %date%%message%'
+            'message_format' => '[%label%] %date% %message%'
         ), $settings);
 
         // Remove trailing slash from log path

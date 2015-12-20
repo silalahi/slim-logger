@@ -1,7 +1,7 @@
 {
   "name": "silalahi/slim-logger",
   "description": "File log writter class and middleware for Slim framework 3",
-  "keywords": ["slim", "middleware", "log"],
+  "keywords": ["slim", "middleware", "log", "file", "writter"],
   "homepage": "https://github.com/silalahi/slim-logger",
   "type": "library",
   "authors": [
