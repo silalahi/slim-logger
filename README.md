@@ -59,6 +59,40 @@ Output in file:
 [DEBUG] 2015-12-21T01:23:19+07:00 Default log was debug, if you not specified second argument.
 ```
 
+
+### Middleware
+
+Example usage in Slim framework as Middleware
+
+```php
+<?php
+
+require "vendor/autoload.php";
+
+date_default_timezone_set("Asia/Jakarta");
+
+$app = new \Slim\App;
+
+// Adding middleware to Slim App
+$app->add(new Silalahi\Slim\Logger());
+
+$app->get('/', function ($request, $response, $args) {
+  return $response->write("Hello, World!");
+});
+
+$app->run();
+
+```
+
+The output file:
+
+```
+[INFO] 2015-12-21T01:30:58+07:00 |200|0.003357 sec|::1|GET /
+[INFO] 2015-12-21T01:31:04+07:00 |200|0.001672 sec|::1|GET /
+```
+
+## Settings
+
 Available setting are:
 
 ```
@@ -91,35 +125,4 @@ $container['logger'] = function($c) {
     ]
   );
 };
-```
-
-### Middleware
-
-Example usage in Slim framework as Middleware
-
-```php
-<?php
-
-require "vendor/autoload.php";
-
-date_default_timezone_set("Asia/Jakarta");
-
-$app = new \Slim\App;
-
-// Adding middleware to Slim App
-$app->add(new Silalahi\Slim\Logger());
-
-$app->get('/', function ($request, $response, $args) {
-  return $response->write("Hello, World!");
-});
-
-$app->run();
-
-```
-
-The output file:
-
-```
-[INFO] 2015-12-21T01:30:58+07:00 |200|0.003357 sec|::1|GET /
-[INFO] 2015-12-21T01:31:04+07:00 |200|0.001672 sec|::1|GET /
 ```
