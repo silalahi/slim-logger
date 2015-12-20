@@ -84,7 +84,7 @@ class Logger {
         // Begin of time
         $start = time();
         // URL accessed
-        $path = "";
+        $path = $request->getPath();
 
         // Call next middleware
         $response = $next($request, $response);
@@ -94,9 +94,9 @@ class Logger {
         // Latency
         $latency = $end - $start;
         // Client IP address
-        $clientIP = "";
+        $clientIP = "0.0.0.0";
         // Method access
-        $method = "";
+        $method = $request->getMethod();
 
         $this->write(sprintf("|%d|%13v|%s|%s %s", $response->getStatus(), $latency, $clientIP, $method, $path), self::INFO);
 
