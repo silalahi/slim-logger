@@ -116,8 +116,8 @@ class Logger {
         // Determine label
         $label = "DEBUG";
         switch($level) {
-            case self::FATAL:
-                $label = 'FATAL';
+            case self::CRITICAL:
+                $label = 'CRITICAL';
                 break;
             case self::ERROR:
                 $label = 'ERROR';
