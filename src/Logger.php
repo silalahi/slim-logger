@@ -82,7 +82,7 @@ class Logger {
     public function __invoke($request, $response, $next)
     {
         // Begin of time
-        $start = time();
+        $start = microtime();
         // URL accessed
         $path = $request->getUri()->getPath();
 
@@ -90,7 +90,7 @@ class Logger {
         $response = $next($request, $response);
 
         // End of time
-        $end = time();
+        $end = microtime();
         // Latency
         $latency = $end - $start;
         // Client IP address
@@ -98,7 +98,7 @@ class Logger {
         // Method access
         $method = $request->getMethod();
 
-        $this->write(sprintf("|%d|%13v|%s|%s %s", $response->getStatusCode(), $latency, $clientIP, $method, $path), self::INFO);
+        $this->write(sprintf("|%d|%f sec|%s|%s %s", $response->getStatusCode(), $latency, $clientIP, $method, $path), self::INFO);
 
         return $response;
     }
