@@ -5,7 +5,7 @@ File log writter class and middleware for Slim framework
 Via [composer](https://getcomposer.org/)
 
 ``
-$ composer require silalahi/slim-logger
+$ composer require silalahi/slim-logger --dev dev-master
 ``
 
 Requires Slim Framework 3 and PHP 5.5.0 or newer.
