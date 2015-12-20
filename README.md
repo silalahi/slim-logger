@@ -59,6 +59,40 @@ Output in file:
 [DEBUG] 2015-12-21T01:23:19+07:00 Default log was debug, if you not specified second argument.
 ```
 
+Available setting are:
+
+```
+path:
+(string) The relative or absolute filesystem path to a writable directory.
+
+name_format:
+(string) The log file name format; parsed with `date()`.
+
+extension:
+(string) The file extention to append to the filename`.
+
+message_format:
+(string) The log message format; available tokens are...
+    %label%      Replaced with the log message level (e.g. FATAL, ERROR, WARN).
+    %date%       Replaced with a ISO8601 date string for current timezone.
+    %message%    Replaced with the log message, coerced to a string.
+```
+
+Example settings:
+
+```php
+$container['logger'] = function($c) {
+  return new Silalahi\Slim\Logger(
+    [
+      'path' => '.',
+      'name_format' => 'Y-m-d',
+      'extension' => '.txt',
+      'message_format' => '[%label%] %date% %message%'
+    ]
+  );
+};
+```
+
 ### Middleware
 
 Example usage in Slim framework as Middleware
