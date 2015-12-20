@@ -1,5 +1,5 @@
-# Logger for Slim framework
-File log writter for Slim framework. Logger works well as class library (inject) or middleware in Slim framework 3 application.
+# Logger for Slim framework 3
+File log writter for Slim framework. Logger works well as class library (inject) or middleware for Slim framework 3 application.
 
 ## Install
 You can install Logger via [composer](https://getcomposer.org/).
@@ -8,13 +8,13 @@ You can install Logger via [composer](https://getcomposer.org/).
 $ composer require silalahi/slim-logger --dev dev-master
 ``
 
-Requires Slim Framework 3 and PHP 5.5.0 or newer. Visit Logger in [Packagist](https://packagist.org/packages/silalahi/slim-logger)
+Requires Slim Framework 3 and PHP 5.5.0 or newer. Visit Logger repository at [Packagist](https://packagist.org/packages/silalahi/slim-logger).
 
 ## Usage
 
-### Library class
+### Class Library
 
-To use Logger as class library, you can simply add Logger to Slim container.
+To use Logger as class library, you can simply inject Logger instance into Slim container.
 
 ```php
 <?php
@@ -51,7 +51,7 @@ $app->run();
 ```
 
 
-The code above will generate a file log:
+The code above will create a log file:
 
 ```
 [INFO] 2015-12-21T01:21:57+07:00 This message from logger class library
@@ -84,7 +84,7 @@ $app->run();
 
 ```
 
-The code above will generate log file:
+The code above will create a log file:
 
 ```
 [INFO] 2015-12-21T01:30:58+07:00 |200|0.003357 sec|::1|GET /
