@@ -16,7 +16,7 @@ Requires Slim Framework 3 and PHP 5.5.0 or newer.
 
 Example usage in Slim framework
 
-``php
+```php
 <?php
 
 require "vendor/autoload.php";
@@ -48,15 +48,15 @@ $app->get('/', function ($request, $response, $args) {
 
 $app->run();
 
-``
+```
 
 
 Output in file:
 
-``
+```
 [INFO] 2015-12-21T01:21:57+07:00 This message from logger class library
 [CRITICAL] 2015-12-21T01:22:39+07:00 This is critical error log
 [DEBUG] 2015-12-21T01:23:19+07:00 Default log was debug, if you not specified second argument.
-``
+```
 
 ### Middleware
