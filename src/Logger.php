@@ -150,6 +150,42 @@ class Logger {
     }
 
     /**
+     * Write to log with debug level
+     *
+     * @param mixed $object Object
+     *
+     * @return void
+     */
+    public function debug($object)
+    {
+        $this->write($object, self::DEBUG);
+    }
+
+    /**
+     * Write to log with critical level
+     *
+     * @param $object
+     *
+     * @return void
+     */
+    public function critical($object)
+    {
+        $this->write($object, self::CRITICAL);
+    }
+
+    /**
+     * Write to log with error level
+     *
+     * @param $object
+     *
+     * @return void
+     */
+    public function error($object)
+    {
+        $this->write($object, self::ERROR);
+    }
+
+    /**
      * Helper function to get client IP Address
      * NOTE: There is security implications
      * @source http://roshanbh.com.np/2007/12/getting-real-ip-address-in-php.html
