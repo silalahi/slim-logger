@@ -1,4 +1,4 @@
-# Logger for Slim framework 3
+# Logger for Slim Framework 3
 File log writter for Slim framework. Logger works well as class library (inject) or middleware for Slim framework 3 application. Logger created from [Slim-Logger](https://github.com/codeguy/Slim-Logger) and inspired by [Gin](https://github.com/gin-gonic/gin)'s log
 
 ## Install
@@ -51,7 +51,7 @@ $app->run();
 ```
 
 
-The code above will create a log file:
+The code above will create a log file similar like this:
 
 ```
 [INFO] 2015-12-21T01:21:57+07:00 This message from logger class library
@@ -84,7 +84,7 @@ $app->run();
 
 ```
 
-The code above will create a log file:
+The code above will create a log file similar like this:
 
 ```
 [INFO] 2015-12-21T01:30:58+07:00 |200|0.003357 sec|::1|GET /
