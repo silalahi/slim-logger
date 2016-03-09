@@ -100,6 +100,9 @@ Available setting for Logger are:
 path:
 (string) The relative or absolute filesystem path to a writable directory.
 
+name:
+(string) The log file name (Prefix file name).
+
 name_format:
 (string) The log file name format; parsed with `date()`.
 
@@ -120,6 +123,7 @@ $container['logger'] = function($c) {
   return new Silalahi\Slim\Logger(
     [
       'path' => '.',
+      'name' => 'app_logger_',
       'name_format' => 'Y-m-d',
       'extension' => '.txt',
       'message_format' => '[%label%] %date% %message%'
