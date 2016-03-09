@@ -40,6 +40,9 @@ class Logger {
      * path:
      * (string) The relative or absolute filesystem path to a writable directory.
      *
+     * name:
+     * (string) The log file name (Prefix file name).
+     *
      * name_format:
      * (string) The log file name format; parsed with `date()`.
      *
@@ -60,6 +63,7 @@ class Logger {
         // Merge settings
         $this->settings =  array_merge(array(
             'path' => '.',
+            'name' => 'logger_',
             'name_format' => 'Y-m-d',
             'extension' => 'log',
             'message_format' => '[%label%] %date% %message%'
@@ -138,7 +142,8 @@ class Logger {
         );
 
         if ( ! $this->resource) {
-            $filename = date($this->settings['name_format']);
+            $filename = $this->settings['name'];
+            $filename .= date($this->settings['name_format']);
             if (! empty($this->settings['extension'])) {
                 $filename .= '.' . $this->settings['extension'];
             }
