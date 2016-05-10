@@ -19,6 +19,7 @@ class Logger {
     const INFO      = 7;
     const DEBUG     = 8;
 
+
     const VERSION   = "0.1.0";
 
 
@@ -217,3 +218,5 @@ class Logger {
     }
 
 }
+
+
